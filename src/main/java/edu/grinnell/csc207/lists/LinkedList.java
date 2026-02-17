@@ -41,8 +41,10 @@ public class LinkedList {
             this.first = newNode;
         } else {
             Node current = this.first;
-            for(; current.next == null; current = current.next);
-            current.next =newNode;
+            while(current.next!=null){
+                current = current.next;
+            }
+            current.next= newNode;
         }
     }
 
@@ -54,8 +56,11 @@ public class LinkedList {
         if (this.first == null) {
             count = 0;
         } else {
-            for(Node current = this.first; current.next == null; current = current.next);
-            count++;
+            Node current = this.first;
+            while(current!=null) {
+                count++; 
+                current=current.next;
+            }
         }
         return count;
     }
@@ -65,7 +70,14 @@ public class LinkedList {
      * @return the value at the specified <code>index</code>
      */
     public int get(int index) {
-        throw new UnsupportedOperationException("Unimplemented method 'get'");
+        Node current = this.first;
+        if(current == null) {
+            return -1;
+        }
+        for(int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        return current.value;
     }
 
     /**
@@ -75,6 +87,22 @@ public class LinkedList {
      * @return the element at <code>index</code>
      */
     public int remove(int index) {
-        throw new UnsupportedOperationException("Unimplemented method 'remove'");
+        Node current = this.first;
+        int value = 0;
+        if(current == null) {
+            return -1;
+        }
+
+        if(index == 0) {
+            value = current.value;
+            this.first = current.next;
+        }
+
+        for(int i = 0; i < index - 1; i++) {
+            current = current.next;
+        }
+        value = current.value;
+        current.next = current.next.next;
+        return value;
     }
 }
