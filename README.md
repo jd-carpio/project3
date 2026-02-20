@@ -1,6 +1,7 @@
 # List Implementation lab
 
-Authors: (_TODO: fill in names here!_)
+Authors: Juan Diego Carpio Hurtado
+         Risa Takemoto
 
 ## Build commands
 
@@ -10,6 +11,4 @@ Authors: (_TODO: fill in names here!_)
 
 ## Resources
 
-*   (_TODO: fill in resources here!_)
-*   ...
-*   ...
+*   Lab instruction page
