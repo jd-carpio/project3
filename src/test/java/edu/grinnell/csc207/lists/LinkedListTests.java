@@ -26,7 +26,7 @@ public class LinkedListTests {
 
     @Test
     public void listTestRemove() {
-        Linked list = new LinkedList();
+        LinkedList list = new LinkedList();
         for (int i = 0; i < 15; i++) {
             list.add(i);
         }
