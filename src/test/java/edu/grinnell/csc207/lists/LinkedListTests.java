@@ -52,7 +52,7 @@ public class LinkedListTests {
         LinkedList list = new LinkedList();
         for (int i = 0; i < sz; i++) {
             list.add(i);
-        }
+        } 
         return list.size() == sz;
     }
 }
