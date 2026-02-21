@@ -95,10 +95,14 @@ public class LinkedList {
 
         if(index == 0) {
             value = current.value;
-            this.first = current.next;
+            this.first = first.next;
+            return value;
         }
 
         for(int i = 0; i < index - 1; i++) {
+            if (current.next == null) {
+                return -1;
+            }
             current = current.next;
         }
         value = current.value;

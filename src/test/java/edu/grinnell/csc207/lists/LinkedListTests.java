@@ -55,4 +55,18 @@ public class LinkedListTests {
         } 
         return list.size() == sz;
     }
+
+    @Property
+    public boolean listDelete(@ForAll @IntRange(min = 0, max = 500) int sz) {
+        LinkedList list = new LinkedList();
+        for (int i = 0; i < sz; i++) {
+            list.add(i);
+        }
+        for (int i = 0; i < sz; i++) {
+            list.remove(0);
+        }
+        return list.size() == 0;
+    }
 }
+
+
