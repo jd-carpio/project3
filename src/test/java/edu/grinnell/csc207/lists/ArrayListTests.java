@@ -17,7 +17,7 @@ public class ArrayListTests {
 
     @Test
     public void removeMiddleElement() {
-        Array list = new ArrayList();
+        ArrayList list = new ArrayList();
         list.add(1);
         list.add(2);
         list.add(3);
