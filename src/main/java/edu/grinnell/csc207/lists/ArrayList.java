@@ -1,11 +1,18 @@
 package edu.grinnell.csc207.lists;
 
+import java.util.Arrays;
+
 /**
  * An array-based implementation of the list ADT.
  */
 public class ArrayList {
     int[] data ;
     int size;
+
+    public ArrayList() {
+    data = new int[10];
+    size = 0;
+    }
 
     private void ensureCapacity() {
         if (size == data.length) {
